@@ -5,9 +5,9 @@
 #include <iterator>
 #include <algorithm>
 
-constexpr auto not_set = -1;
-constexpr auto x86     = 0;
-constexpr auto x86_64  = 1;
+#define NOT_SET -1
+#define X86 0
+#define X86_64 1
 
 using namespace std;
 

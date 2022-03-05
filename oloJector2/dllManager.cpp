@@ -4,7 +4,7 @@
 DllManager::DllManager()
 {
 	m_path   = "";
-	m_arch   = not_set;
+	m_arch   = NOT_SET;
 	m_length = 0;
 }
 
@@ -30,7 +30,7 @@ void DllManager::loadDll()
 	if (!dll_file)
 	{
 		cout << "[-] Dll not found" << endl;
-		m_arch   = not_set;
+		m_arch   = NOT_SET;
 		m_length = 0;
 		return;
 	}
@@ -69,16 +69,16 @@ void DllManager::loadDll()
 	if (strstr(buffer, pattern_x86))
 	{
 		cout << "[+] Dll " << m_path << " loaded" << endl;
-		cout << "[+] Detected arch : x86";
-		m_arch = x86;
+		cout << "[+] Detected arch : x86" << endl;
+		m_arch = X86;
 		return;
 	}
 
 	if (strstr(buffer, pattern_x86_64))
 	{
 		cout << "[+] Dll " << m_path << " loaded." << endl;
-		cout << "[+] Detected arch : x86_64";
-		m_arch = x86_64;
+		cout << "[+] Detected arch : x86_64" << endl;
+		m_arch = X86_64;
 		return;
 	}
 
