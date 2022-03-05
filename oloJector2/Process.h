@@ -18,6 +18,7 @@ public:
 	Process(int pid);
 
 	void getProcessInfo();
+	void printProcess();
 
 private:
 	int m_pid;

@@ -67,3 +67,11 @@ void Process::getProcessInfo()
 	cout << "[+] Get arch of process " << m_processName << " : " << m_arch << endl;
 }
 
+void Process::printProcess()
+{
+	string padPid = to_string(m_pid);
+	string padName = m_processName;
+	padPid.insert(padPid.begin(), 5 - padPid.length(), '0');
+	padName = padName.append(50 - padName.length(), ' ').substr(0, 50);
+	cout << padPid << " | " << padName << " | " << m_arch << endl;
+}
