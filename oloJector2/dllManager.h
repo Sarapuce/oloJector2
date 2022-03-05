@@ -11,11 +11,11 @@ constexpr auto x86_64  = 1;
 
 using namespace std;
 
-class dllManager
+class DllManager
 {
 public:
-	dllManager();
-	dllManager(string path);
+	DllManager();
+	DllManager(string path);
 
 	void setPath(string path);
 	void loadDll();

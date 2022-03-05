@@ -1,7 +1,7 @@
-#include "dllManager.h"
+#include "DllManager.h"
 
 // Initialize an empty dllManager
-dllManager::dllManager()
+DllManager::DllManager()
 {
 	m_path   = "";
 	m_arch   = not_set;
@@ -9,18 +9,18 @@ dllManager::dllManager()
 }
 
 // Initialize a dllManager. We load the dll to have all needed information
-dllManager::dllManager(string path)
+DllManager::DllManager(string path)
 {
 	m_path = path;
 	loadDll();
 }
 
-void dllManager::setPath(string path)
+void DllManager::setPath(string path)
 {
 	m_path = path;
 }
 
-void dllManager::loadDll()
+void DllManager::loadDll()
 {
 	cout << "[+] Loading dll : " << m_path << endl;
 
