@@ -3,6 +3,7 @@
 #include <iostream>
 #include <Windows.h>
 #include <psapi.h>
+#include <atlstr.h>
 
 #define NOT_SET -1
 #define X86 0

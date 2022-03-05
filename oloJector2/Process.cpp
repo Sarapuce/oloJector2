@@ -22,7 +22,6 @@ void Process::getProcessInfo()
 	}
 
 	// Get process name
-	// TODO : Stop working with string but only use TCHAR
 	TCHAR name[MAX_PATH];
 
 	HANDLE processHandle = OpenProcess(PROCESS_QUERY_INFORMATION | PROCESS_VM_READ,FALSE, m_pid);
@@ -30,7 +29,7 @@ void Process::getProcessInfo()
 	
 	// Convert TCHAR* to string
 	wstring tempName = name;
-	m_processName = string(tempName.begin(), tempName.end());
+	m_processName = CW2A(name);
 	m_processName = m_processName.substr(m_processName.find_last_of("\\") + 1);
 
 	cout << "[+] Get name of process " << m_pid << " : " << m_processName << endl;
@@ -62,6 +61,8 @@ void Process::getProcessInfo()
 		else
 			m_arch = X86_64;
 	}
+
+	CloseHandle(processHandle);
 
 	cout << "[+] Get arch of process " << m_processName << " : " << m_arch << endl;
 }
