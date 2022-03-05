@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31321.278
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "oloJector2", "oloJector2\oloJector2.vcxproj", "{3CC116E1-D8C6-4551-BED1-D8FF906D7706}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|x64 = Debug|x64
+		Debug|x86 = Debug|x86
+		Release|x64 = Release|x64
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3CC116E1-D8C6-4551-BED1-D8FF906D7706}.Debug|x64.ActiveCfg = Debug|x64
+		{3CC116E1-D8C6-4551-BED1-D8FF906D7706}.Debug|x64.Build.0 = Debug|x64
+		{3CC116E1-D8C6-4551-BED1-D8FF906D7706}.Debug|x86.ActiveCfg = Debug|Win32
+		{3CC116E1-D8C6-4551-BED1-D8FF906D7706}.Debug|x86.Build.0 = Debug|Win32
+		{3CC116E1-D8C6-4551-BED1-D8FF906D7706}.Release|x64.ActiveCfg = Release|x64
+		{3CC116E1-D8C6-4551-BED1-D8FF906D7706}.Release|x64.Build.0 = Release|x64
+		{3CC116E1-D8C6-4551-BED1-D8FF906D7706}.Release|x86.ActiveCfg = Release|Win32
+		{3CC116E1-D8C6-4551-BED1-D8FF906D7706}.Release|x86.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {EE6A3505-817C-48EC-A7FF-103D0CE6AFAC}
+	EndGlobalSection
+EndGlobal
