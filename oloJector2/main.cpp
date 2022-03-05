@@ -1,5 +1,6 @@
 #include <iostream>
 #include "dllManager.h"
+#include "Process.h"
 
 using namespace std;
 
@@ -22,6 +23,9 @@ int main(int argc, char** argv)
 		return 1;
 	}
 
-	dllManager* dll = new dllManager(argv[1]);
+	DllManager* dll = new DllManager(argv[1]);
+	Process* p_32 = new Process(19152);
+	Process* p_64 = new Process(19236);
+	Process* p_null = new Process();
 	return 0;
 }
