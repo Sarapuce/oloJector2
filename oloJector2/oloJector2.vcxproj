@@ -140,12 +140,14 @@
   </ItemDefinitionGroup>
   <ItemGroup>
     <ClCompile Include="DllManager.cpp" />
+    <ClCompile Include="Injector.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Process.cpp" />
     <ClCompile Include="ProcessList.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="DllManager.h" />
+    <ClInclude Include="Injector.h" />
     <ClInclude Include="Process.h" />
     <ClInclude Include="ProcessList.h" />
   </ItemGroup>

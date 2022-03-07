@@ -1,6 +1,7 @@
 #include <iostream>
 #include "dllManager.h"
 #include "ProcessList.h"
+#include "Injector.h"
 
 using namespace std;
 
@@ -26,5 +27,8 @@ int main(int argc, char** argv)
 	DllManager* dll = new DllManager(argv[1]);
 	ProcessList* lp = new ProcessList();
 	lp->printProcessList();
+	Process* p = new Process(18716);
+	Injector* injector = new Injector(dll, p);
+	injector->inject();
 	return 0;
 }
