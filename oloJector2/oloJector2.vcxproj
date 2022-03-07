@@ -142,10 +142,12 @@
     <ClCompile Include="DllManager.cpp" />
     <ClCompile Include="main.cpp" />
     <ClCompile Include="Process.cpp" />
+    <ClCompile Include="ProcessList.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="DllManager.h" />
     <ClInclude Include="Process.h" />
+    <ClInclude Include="ProcessList.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
