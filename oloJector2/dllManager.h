@@ -19,6 +19,7 @@ public:
 
 	void setPath(string path);
 	void loadDll();
+	int getArch();
 
 private:
 	string	m_path;

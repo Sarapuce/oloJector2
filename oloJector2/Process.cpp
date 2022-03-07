@@ -77,3 +77,8 @@ void Process::printProcess()
 		arch_literal = "64 bits";
 	cout << padPid << " | " << padName << " | " << arch_literal << endl;
 }
+
+int Process::getArch()
+{
+	return m_arch;
+}

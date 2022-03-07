@@ -84,3 +84,8 @@ void DllManager::loadDll()
 
 	cout << "[-] Dll arch not recognized" << endl;
 }
+
+int DllManager::getArch()
+{
+	return m_arch;
+}
