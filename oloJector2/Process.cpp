@@ -2,7 +2,7 @@
 
 Process::Process()
 {
-	m_pid			= 0;
+	m_pid			= -1;
 	m_processName	= "<unknow>";
 	m_arch			= NOT_SET;
 }
@@ -15,20 +15,19 @@ Process::Process(int pid)
 
 void Process::getProcessInfo()
 {
-	if (!m_pid)
+	// Can't get name of some process like System or MsMpEng.exe
+	if (m_pid == -1)
 	{
 		cout << "[-] Pid of process not set" << endl;
 		return;
 	}
 
 	// Get process name
-	TCHAR name[MAX_PATH];
-
-	HANDLE processHandle = OpenProcess(PROCESS_QUERY_INFORMATION | PROCESS_VM_READ,FALSE, m_pid);
+	TCHAR name[MAX_PATH] = L"<unknow>";
+	HANDLE processHandle = OpenProcess(PROCESS_QUERY_INFORMATION | PROCESS_VM_READ, FALSE, m_pid);
 	GetProcessImageFileName(processHandle, name, MAX_PATH);
-	
+
 	// Convert TCHAR* to string
-	wstring tempName = name;
 	m_processName = CW2A(name);
 	m_processName = m_processName.substr(m_processName.find_last_of("\\") + 1);
 
@@ -73,5 +72,8 @@ void Process::printProcess()
 	string padName = m_processName;
 	padPid.insert(padPid.begin(), 5 - padPid.length(), '0');
 	padName = padName.append(50 - padName.length(), ' ').substr(0, 50);
-	cout << padPid << " | " << padName << " | " << m_arch << endl;
+	string arch_literal = "32 bits";
+	if (m_arch)
+		arch_literal = "64 bits";
+	cout << padPid << " | " << padName << " | " << arch_literal << endl;
 }
