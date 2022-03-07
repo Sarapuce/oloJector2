@@ -82,3 +82,8 @@ int Process::getArch()
 {
 	return m_arch;
 }
+
+int Process::getPid()
+{
+	return m_pid;
+}

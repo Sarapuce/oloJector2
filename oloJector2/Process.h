@@ -20,6 +20,7 @@ public:
 	void getProcessInfo();
 	void printProcess();
 	int getArch();
+	int getPid();
 
 private:
 	int m_pid;
