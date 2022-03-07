@@ -20,6 +20,7 @@ public:
 	void setPath(string path);
 	void loadDll();
 	int getArch();
+	int getLength();
 
 private:
 	string	m_path;

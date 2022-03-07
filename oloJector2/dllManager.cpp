@@ -89,3 +89,8 @@ int DllManager::getArch()
 {
 	return m_arch;
 }
+
+int DllManager::getLength()
+{
+	return m_length;
+}
