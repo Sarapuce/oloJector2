@@ -21,6 +21,7 @@ public:
 	void loadDll();
 	int getArch();
 	int getLength();
+	string getPath();
 
 private:
 	string	m_path;

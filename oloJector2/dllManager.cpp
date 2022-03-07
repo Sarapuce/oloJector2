@@ -94,3 +94,8 @@ int DllManager::getLength()
 {
 	return m_length;
 }
+
+string DllManager::getPath()
+{
+	return m_path;
+}
